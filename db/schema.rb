@@ -21,7 +21,7 @@ ActiveRecord::Schema.define(version: 2022_04_26_202346) do
     t.string "name", null: false
     t.text "body"
     t.string "record_type", null: false
-    t.bigint "record_id", null: false
+    t.integer "record_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["record_type", "record_id", "name"], name: "index_action_text_rich_texts_uniqueness", unique: true
@@ -78,7 +78,7 @@ ActiveRecord::Schema.define(version: 2022_04_26_202346) do
     t.string "link"
     t.integer "position"
     t.boolean "enabled", default: true
-    t.bigint "adherent_category_id"
+    t.integer "adherent_category_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["adherent_category_id"], name: "index_adherents_on_adherent_category_id"
@@ -140,7 +140,7 @@ ActiveRecord::Schema.define(version: 2022_04_26_202346) do
   create_table "formations", force: :cascade do |t|
     t.string "title"
     t.text "search_description"
-    t.bigint "formation_category_id"
+    t.integer "formation_category_id"
     t.string "address"
     t.string "zipcode"
     t.string "city"
@@ -181,8 +181,8 @@ ActiveRecord::Schema.define(version: 2022_04_26_202346) do
   create_table "menu_blocks", force: :cascade do |t|
     t.string "title"
     t.integer "position"
-    t.bigint "main_page_id"
-    t.bigint "theme_id"
+    t.integer "main_page_id"
+    t.integer "theme_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["main_page_id"], name: "index_menu_blocks_on_main_page_id"
@@ -193,14 +193,14 @@ ActiveRecord::Schema.define(version: 2022_04_26_202346) do
     t.string "title"
     t.string "url"
     t.integer "position"
-    t.bigint "menu_block_id"
+    t.integer "menu_block_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["menu_block_id"], name: "index_menu_items_on_menu_block_id"
   end
 
   create_table "participants", force: :cascade do |t|
-    t.bigint "subscription_id"
+    t.integer "subscription_id"
     t.string "firstname"
     t.string "lastname"
     t.string "organization"
@@ -224,7 +224,7 @@ ActiveRecord::Schema.define(version: 2022_04_26_202346) do
     t.string "link"
     t.integer "position"
     t.boolean "enabled", default: true
-    t.bigint "partner_category_id"
+    t.integer "partner_category_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["partner_category_id"], name: "index_partners_on_partner_category_id"
@@ -233,7 +233,7 @@ ActiveRecord::Schema.define(version: 2022_04_26_202346) do
   create_table "pg_search_documents", force: :cascade do |t|
     t.text "content"
     t.string "searchable_type"
-    t.bigint "searchable_id"
+    t.integer "searchable_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["searchable_type", "searchable_id"], name: "index_pg_search_documents_on_searchable_type_and_searchable_id"
@@ -253,7 +253,7 @@ ActiveRecord::Schema.define(version: 2022_04_26_202346) do
     t.text "search_description"
     t.datetime "published_at"
     t.datetime "expired_at"
-    t.bigint "post_category_id"
+    t.integer "post_category_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.boolean "enabled", default: true
@@ -261,9 +261,9 @@ ActiveRecord::Schema.define(version: 2022_04_26_202346) do
   end
 
   create_table "profile_interfaces", force: :cascade do |t|
-    t.bigint "profile_id"
+    t.integer "profile_id"
     t.string "profilable_type"
-    t.bigint "profilable_id"
+    t.integer "profilable_id"
     t.integer "position"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -289,7 +289,7 @@ ActiveRecord::Schema.define(version: 2022_04_26_202346) do
     t.integer "category", default: 0
     t.string "link"
     t.string "resourceable_type"
-    t.bigint "resourceable_id"
+    t.integer "resourceable_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.boolean "enabled", default: true
@@ -299,7 +299,7 @@ ActiveRecord::Schema.define(version: 2022_04_26_202346) do
   create_table "schedules", force: :cascade do |t|
     t.tsrange "time_range"
     t.string "schedulable_type"
-    t.bigint "schedulable_id"
+    t.integer "schedulable_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["schedulable_type", "schedulable_id"], name: "index_schedules_on_schedulable_type_and_schedulable_id"
@@ -310,7 +310,7 @@ ActiveRecord::Schema.define(version: 2022_04_26_202346) do
     t.string "title"
     t.text "description"
     t.string "seoable_type"
-    t.bigint "seoable_id"
+    t.integer "seoable_id"
     t.string "param"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -337,14 +337,14 @@ ActiveRecord::Schema.define(version: 2022_04_26_202346) do
     t.string "lastname"
     t.integer "position"
     t.boolean "enabled", default: true
-    t.bigint "staff_member_category_id"
+    t.integer "staff_member_category_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["staff_member_category_id"], name: "index_staff_members_on_staff_member_category_id"
   end
 
   create_table "subscriptions", force: :cascade do |t|
-    t.bigint "formation_id"
+    t.integer "formation_id"
     t.float "cost"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -353,9 +353,9 @@ ActiveRecord::Schema.define(version: 2022_04_26_202346) do
   end
 
   create_table "theme_interfaces", force: :cascade do |t|
-    t.bigint "theme_id"
+    t.integer "theme_id"
     t.string "themable_type"
-    t.bigint "themable_id"
+    t.integer "themable_id"
     t.integer "position"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

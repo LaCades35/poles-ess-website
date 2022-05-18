@@ -56,10 +56,10 @@ fr:
         posts: posts_path
       block_icons:
         formations: "picto/Picto-formations.svg"
-        posts: "picto/Picto-actus.svg"
+        posts: "picto/Picto-actus-cta.png"
       icons:
         formations: "picto/Picto-formations-light.svg"
-        posts: "picto/Picto-actus.svg"
+        posts: "picto/Picto-actus.png"
     enabled_features:
       labels:
         formations: Formations

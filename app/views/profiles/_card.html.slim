@@ -1,6 +1,6 @@
 .flex.items-center.mb-3.cursor-pointer.box-link
   .flex.flex-col.flex-shrink-0.w-16.p-1.border.border-gray-300.bg-c-gray-100.font-bold.uppercase.leading-4.text-center
-    = image_pack_tag "picto/Picto-#{profile.key}.svg", class: "w-full"
+    = image_pack_tag "picto/Picto-#{profile.key}.png", class: "w-full"
   .px-2
     = link_to profile.title, profile_path(profile), class: 'profile-card__title'
     p.profile-card__description= profile.baseline.truncate(50)
