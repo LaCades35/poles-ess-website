@@ -34,7 +34,7 @@ class Admin::PostsController < Admin::BaseController
   end
 
   def update
-    if @post.update_attributes(post_params)
+    if @post.update(post_params)
       flash[:notice] = "L'actualité a été mise à jour avec succès"
       redirect_to params[:continue].present? ? edit_admin_post_path(@post) : admin_posts_path
     else
@@ -47,7 +47,7 @@ class Admin::PostsController < Admin::BaseController
   end
 
   def update_configuration
-    if @post.update_attributes(post_params)
+    if @post.update(post_params)
       flash[:notice] = "L'actualité a été mise à jour avec succès"
       redirect_to params[:continue].present? ? edit_configuration_admin_post_path(@post) : admin_posts_path
     else

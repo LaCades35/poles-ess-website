@@ -30,7 +30,7 @@ class Admin::AdherentsController < Admin::BaseController
   end
 
   def update
-    if @adherent.update_attributes(adherent_params)
+    if @adherent.update(adherent_params)
       flash[:notice] = "L'adhérent a été mis à jour avec succès"
       redirect_to params[:continue].present? ? edit_admin_adherent_path(@adherent) : admin_adherents_path
     else
@@ -43,7 +43,7 @@ class Admin::AdherentsController < Admin::BaseController
   end
 
   def update_configuration
-    if @adherent.update_attributes(adherent_params)
+    if @adherent.update(adherent_params)
       flash[:notice] = "L'adhérent a été mis à jour avec succès"
       redirect_to params[:continue].present? ? edit_configuration_admin_adherent_path(@adherent) : admin_adherents_path
     else

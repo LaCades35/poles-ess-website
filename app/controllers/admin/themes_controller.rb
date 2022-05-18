@@ -30,7 +30,7 @@ class Admin::ThemesController < Admin::BaseController
   end
 
   def update
-    if @theme.update_attributes(theme_params)
+    if @theme.update(theme_params)
       flash[:notice] = "Thème mis à jour avec succès"
       redirect_to params[:continue].present? ? edit_admin_theme_path(@theme) : admin_themes_path
     else
@@ -44,7 +44,7 @@ class Admin::ThemesController < Admin::BaseController
   end
 
   def update_configuration
-    if @theme.update_attributes(theme_params)
+    if @theme.update(theme_params)
       flash[:notice] = "Thème mis à jour avec succès"
       redirect_to params[:continue].present? ? edit_configuration_admin_theme_path(@theme) : admin_themes_path
     else
@@ -75,5 +75,5 @@ class Admin::ThemesController < Admin::BaseController
   def get_theme
     @theme = Theme.from_param params[:id]
   end
- 
+
 end

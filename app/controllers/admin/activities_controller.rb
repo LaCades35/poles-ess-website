@@ -34,7 +34,7 @@ class Admin::ActivitiesController < Admin::BaseController
   end
 
   def update
-    if @activity.update_attributes(activity_params)
+    if @activity.update(activity_params)
       flash[:notice] = "Action mise à jour avec succès"
       redirect_to params[:continue].present? ? edit_admin_activity_path(@activity) : admin_activities_path
     else
@@ -47,7 +47,7 @@ class Admin::ActivitiesController < Admin::BaseController
   end
 
   def update_configuration
-    if @activity.update_attributes(activity_params)
+    if @activity.update(activity_params)
       flash[:notice] = "Action mise à jour avec succès"
       redirect_to params[:continue].present? ? edit_configuration_admin_activity_path(@activity) : admin_activities_path
     else
@@ -79,5 +79,5 @@ class Admin::ActivitiesController < Admin::BaseController
   def get_activity
     @activity = Activity.from_param params[:id]
   end
- 
+
 end

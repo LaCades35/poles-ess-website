@@ -31,7 +31,7 @@ class Admin::MainPagesController < Admin::BaseController
   end
 
   def update
-    if @main_page.update_attributes(main_page_params)
+    if @main_page.update(main_page_params)
       flash[:notice] = "Page mise à jour avec succès"
       redirect_after_update_main_page(@main_page)
     else
@@ -45,7 +45,7 @@ class Admin::MainPagesController < Admin::BaseController
   end
 
   def update_configuration
-    if @main_page.update_attributes(main_page_params)
+    if @main_page.update(main_page_params)
       flash[:notice] = "Page mise à jour avec succès"
       redirect_to params[:continue].present? ? edit_configuration_admin_main_page_path(@main_page) : admin_main_pages_path
     else

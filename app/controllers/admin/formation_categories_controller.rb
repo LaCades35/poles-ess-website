@@ -27,7 +27,7 @@ class Admin::FormationCategoriesController < Admin::BaseController
   end
 
   def update
-    if @formation_category.update_attributes(formation_category_params)
+    if @formation_category.update(formation_category_params)
       flash[:notice] = "Catégorie mis à jour avec succès"
       redirect_to params[:continue].present? ? edit_admin_formation_category_path(@formation_category) : admin_formation_categories_path
     else
@@ -56,5 +56,5 @@ class Admin::FormationCategoriesController < Admin::BaseController
   def get_formation_category
     @formation_category = FormationCategory.from_param params[:id]
   end
- 
+
 end

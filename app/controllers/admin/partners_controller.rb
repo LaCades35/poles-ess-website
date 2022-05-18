@@ -30,7 +30,7 @@ class Admin::PartnersController < Admin::BaseController
   end
 
   def update
-    if @partner.update_attributes(partner_params)
+    if @partner.update(partner_params)
       flash[:notice] = "Le partenaire a été mis à jour avec succès"
       redirect_to params[:continue].present? ? edit_admin_partner_path(@partner) : admin_partners_path
     else
@@ -43,7 +43,7 @@ class Admin::PartnersController < Admin::BaseController
   end
 
   def update_configuration
-    if @partner.update_attributes(partner_params)
+    if @partner.update(partner_params)
       flash[:notice] = "Le partenaire a été mis à jour avec succès"
       redirect_to params[:continue].present? ? edit_configuration_admin_partner_path(@partner) : admin_partners_path
     else

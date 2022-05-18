@@ -26,7 +26,7 @@ class Admin::FormationProgramsController < Admin::BaseController
   end
 
   def update
-    if @formation_program.update_attributes(formation_program_params)
+    if @formation_program.update(formation_program_params)
       flash[:notice] = "Programme mis à jour avec succès"
       redirect_to params[:continue].present? ? edit_admin_formation_program_path(@formation_program) : admin_formation_programs_path
     else
@@ -54,5 +54,5 @@ class Admin::FormationProgramsController < Admin::BaseController
   def get_formation_program
     @formation_program = FormationProgram.find params[:id]
   end
- 
+
 end

@@ -37,7 +37,7 @@ class Admin::ParticipantsController < Admin::BaseController
   end
 
   def update
-    if @participant.update_attributes(participant_params)
+    if @participant.update(participant_params)
       flash[:notice] = "Participant mis à jour avec succès"
       redirect_to params[:continue].present? ? edit_admin_participant_path(@participant) : admin_participants_path
     else

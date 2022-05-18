@@ -26,7 +26,7 @@ class Admin::KeyNumbersController < Admin::BaseController
   def edit; end
 
   def update
-    if @key_number.update_attributes(key_number_params)
+    if @key_number.update(key_number_params)
       flash[:notice] = 'Le chiffre a été mis à jour avec succès'
       redirect_to params[:continue].present? ? edit_admin_key_number_path(@key_number) : admin_key_numbers_path
     else

@@ -32,7 +32,7 @@ class Admin::BasicPagesController < Admin::BaseController
   end
 
   def update
-    if @basic_page.update_attributes(basic_page_params)
+    if @basic_page.update(basic_page_params)
       flash[:notice] = 'La page a été mise à jour avec succès'
       redirect_to params[:continue].present? ? edit_admin_basic_page_path(@basic_page) : admin_basic_pages_path
     else
@@ -45,7 +45,7 @@ class Admin::BasicPagesController < Admin::BaseController
   end
 
   def update_configuration
-    if @basic_page.update_attributes(basic_page_params)
+    if @basic_page.update(basic_page_params)
       flash[:notice] = 'La page a été mise à jour avec succès'
       redirect_to params[:continue].present? ? edit_configuration_admin_basic_page_path(@basic_page) : admin_basic_pages_path
     else

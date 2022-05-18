@@ -31,7 +31,7 @@ class Admin::StaffMembersController < Admin::BaseController
   end
 
   def update
-    if @staff_member.update_attributes(staff_member_params)
+    if @staff_member.update(staff_member_params)
       flash[:notice] = "Le membre de l'équipe a été mis à jour avec succès"
       redirect_to params[:continue].present? ? edit_admin_staff_member_path(@staff_member) : admin_staff_members_path
     else
@@ -44,7 +44,7 @@ class Admin::StaffMembersController < Admin::BaseController
   end
 
   def update_configuration
-    if @staff_member.update_attributes(staff_member_params)
+    if @staff_member.update(staff_member_params)
       flash[:notice] = "Le membre de l'équipe a été mis à jour avec succès"
       redirect_to params[:continue].present? ? edit_configuration_admin_staff_member_path(@staff_member) : admin_staff_members_path
     else
