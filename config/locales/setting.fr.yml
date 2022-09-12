@@ -53,7 +53,7 @@ fr:
         posts: S'inscrire à la newsletter
       block_paths:
         formations: formations_path
-        posts: '#newsletter-block'
+        posts: posts_path
       block_icons:
         formations: "picto/Picto-formations.svg"
         posts: "picto/Picto-actus.svg"
