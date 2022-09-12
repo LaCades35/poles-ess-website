@@ -1,4 +1,22 @@
 // Fichier où mettre le style propre à chaque projet
+html, body
+  @apply itc-bk
+.block-menu-toggler
+  > a.active
+    @apply itc-bold
+  > a::before
+    @apply itc-bold
+  &.active
+    > a
+      @apply itc-bold
+
+.picto-link
+  &:hover, &:active, &.active
+    @apply itc-demi
+.text-body
+  font-family: 'FiraSans Regular'
+
+
 .home-bg
   background-image: url("../images/home-bg.png")
 .home-baseline
@@ -32,3 +50,4 @@ nav > div.bg-primary
 
 .picto-link--highlighted img
   margin-top: 0.75rem
+  margin-bottom: 0.60rem
