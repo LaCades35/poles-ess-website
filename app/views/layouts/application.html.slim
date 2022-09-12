@@ -165,6 +165,9 @@ html lang='fr'
             - if Setting.linkedin.present?
               = link_to Setting.linkedin, title: "page linkedin", class: "inline-block w-8 h-8 p-1 border text-center ml-2" do
                 i.fab.fa-linkedin.leading-snug
+            - if Setting.twitter.present?
+              = link_to Setting.twitter, title: "page twitter", class: "inline-block w-8 h-8 p-1 border text-center ml-2" do
+                i.fab.fa-twitter.leading-snug
 
 
 

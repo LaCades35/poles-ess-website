@@ -18,7 +18,7 @@
 
 = render partial: 'admin/shared/picture_form', locals: { \
   f: f, \
-  destroy_path: f.object.image.present? ? destroy_upload_admin_profile_path(f.object, f.object.image.id, redirect: :edit) : nil}
+  destroy_path: f.object.image&.persisted? ? destroy_upload_admin_profile_path(f.object, f.object.image.id, redirect: :edit) : nil}
 
 = render "admin/resources/nested_form", f: f
 

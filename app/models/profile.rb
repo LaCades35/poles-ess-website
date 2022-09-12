@@ -24,6 +24,7 @@ class Profile < ApplicationRecord
   validates :title,
             :baseline,
             presence: true
+  validates :image, content_type: ['image/jpeg', 'image/jpg', 'image/gif', 'image/png']
 
   # Scopes ====================================================================
 

@@ -14,6 +14,7 @@ class StaffMember < ApplicationRecord
   # Callbacks ==================================================================
   validates :firstname, :lastname, presence: true
   validates :staff_member_category, presence: true
+  validates :image, content_type: ['image/jpeg', 'image/jpg', 'image/gif', 'image/png']
 
   # Scopes =====================================================================
   scope :by_lastname, ->(val) {

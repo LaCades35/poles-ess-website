@@ -27,6 +27,7 @@ class Setting < RailsSettings::Base
   field :facebook, type: :string
   field :instagram, type: :string
   field :linkedin, type: :string
+  field :twitter, type: :string
   field :highlighted_feature, default: 'formations', validates: { inclusion: { in: HIGHLIGHTED_FEATURES + [''] } }, option_values: HIGHLIGHTED_FEATURES
   field :enabled_features, type: :array, default: ENABLABLE_FEATURES
   field :people_columns_count, type: :integer, default: 2

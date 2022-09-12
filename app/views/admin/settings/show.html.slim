@@ -90,6 +90,10 @@
       .form-group
         = f.label :linkedin
         = f.text_field :linkedin, value: Setting.linkedin, class: "form-control"
+      .form-group
+        = f.label :twitter
+        = f.text_field :twitter, value: Setting.twitter, class: "form-control"
+
 
     - if feature_enabled?('formations')
       fieldset.border.p-2.mb-4

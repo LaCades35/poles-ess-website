@@ -18,6 +18,6 @@
 
 = render partial: 'admin/shared/picture_form', locals: { \
   f: f, \
-  destroy_path: f.object.image.present? && f.object.image.persisted? ? destroy_upload_admin_partner_path(f.object, f.object.image.id, redirect: :edit) : nil}
+  destroy_path: f.object.image&.persisted? ? destroy_upload_admin_partner_path(f.object, f.object.image.id, redirect: :edit) : nil}
 
 = render "admin/shared/action_btns", f: f, index_path: admin_partners_path

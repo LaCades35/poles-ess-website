@@ -26,7 +26,7 @@ class Admin::SettingsController < Admin::BaseController
   def setting_params
     params.require(:setting).permit(:enabled_features, :pole_name, :pole_address, :pole_address_complementary, :pole_city, :pole_phone, :pole_mail,
       :baseline, :newsletter_subscription_title, :newsletter_subscription_description, :admin_emails,
-      :contact_bloc_description, :contact_bloc_button, :default_tickets_count, :facebook, :instagram, :linkedin,
+      :contact_bloc_description, :contact_bloc_button, :default_tickets_count, :facebook, :instagram, :linkedin, :twitter,
       :reglement_formation, :map_link, :highlighted_feature, :people_columns_count, enabled_features: [])
   end
 

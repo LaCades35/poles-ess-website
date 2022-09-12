@@ -24,6 +24,7 @@ class MainPage < ApplicationRecord
   # Callbacks ==================================================================
   validates :title, presence: true
   validates :key, uniqueness: true, unless: :destroyable?
+  validates :image, content_type: ['image/jpeg', 'image/jpg', 'image/gif', 'image/png']
 
   private def check_for_key
     return true if key.nil?

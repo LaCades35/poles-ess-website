@@ -33,7 +33,7 @@ module SettingHelper
   end
 
   def highlighted_feature_block_path
-    I18n.t(Setting.highlighted_feature, scope: %i(setting highlighted_feature block_paths))
+    public_send(I18n.t(Setting.highlighted_feature, scope: %i(setting highlighted_feature block_paths)))
   end
 
   def feature_enabled?(feature)
