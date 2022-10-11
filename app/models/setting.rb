@@ -5,7 +5,7 @@ class Setting < RailsSettings::Base
   has_one_attached :logo_primary
 
   HIGHLIGHTED_FEATURES = %w[formations posts]
-  ENABLABLE_FEATURES = %w[formations key_numbers newsletter]
+  ENABLABLE_FEATURES = %w[formations newsletter]
 
   field :pole_name, type: :string
   field :pole_address, type: :string

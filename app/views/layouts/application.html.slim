@@ -115,7 +115,7 @@ html lang='fr'
                 li = link_to "Evénements", events_path, class: "footer-link"
                 - if feature_enabled?('formations')
                   li = link_to "Formations", formations_path, class: "footer-link"
-                - if feature_enabled?('key_numbers')
+                - if @key_number_page.enabled?
                   li = link_to "Chiffres clés", key_numbers_path, class: "footer-link"
                 li = link_to "Ressources", resources_path, class: "footer-link"
           .separator.hidden.md:block.h-7.my-auto
