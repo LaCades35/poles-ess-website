@@ -144,7 +144,11 @@ html lang='fr'
               => link_to "l'assembleuse", "https://www.lassembleuse.fr/"
               ' &
               = link_to "© Ellllsa", "https://ellllsa.com/"
-
+            .separator.hidden.md:block.white.h-4.my-auto
+            = link_to "Yode Conseil", 'www.yode-conseil.fr', class: "px-3"
+            .separator.hidden.md:block.white.h-4.my-auto
+            = link_to 'http://dire-et-ecrire.com/', class: "px-3" do
+              = image_pack_tag "Dire-et-ecrire_Logo.jpg", class: "w-12"
             .separator.hidden.md:block.white.h-4.my-auto
             = link_to "Plan du site", sitemap_path, class: "px-3"
             - if @legal_mentions_page.enabled?
@@ -156,6 +160,7 @@ html lang='fr'
             - if @cgu_page.enabled?
               .separator.hidden.md:block.white.h-4.my-auto
               = link_to "CGU", basic_page_path(@cgu_page), class: "px-3"
+
           .social.flex.flex-row.justify-center.md:justify-end.mt-3.md:mt-0
             - if Setting.facebook.present?
               = link_to Setting.facebook, title: "page facebook", class: "inline-block w-8 h-8 p-1 border text-center ml-2" do
