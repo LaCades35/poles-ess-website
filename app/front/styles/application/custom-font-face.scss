@@ -1,0 +1,58 @@
+@font-face {
+  font-family: 'FiraSans Regular';
+  font-style: normal;
+  font-weight: normal;
+  src: local('FiraSans Regular'), url('../fonts/FiraSans/FiraSans-Regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'FiraSans SemiBold';
+  font-style: normal;
+  font-weight: normal;
+  src: local('FiraSans SemiBold'), url('../fonts/FiraSans/FiraSans-SemiBold.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'FiraSans Medium';
+  font-style: normal;
+  font-weight: normal;
+  src: local('FiraSans Medium'), url('../fonts/FiraSans/FiraSans-Medium.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'FiraSans Light';
+  font-style: normal;
+  font-weight: normal;
+  src: local('FiraSans Light'), url('../fonts/FiraSans/FiraSans-Light.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'FiraSans Bold';
+  font-style: normal;
+  font-weight: normal;
+  src: local('FiraSans Bold'), url('../fonts/FiraSans/FiraSans-Bold.woff') format('woff');
+}
+
+.itc-bk {
+  font-family: 'FiraSans Light';
+}
+
+.itc-md {
+  font-family: 'FiraSans Medium';
+}
+
+.itc-md-cn {
+  font-family: 'FiraSans Medium';
+}
+
+.itc-demi {
+  font-family: 'FiraSans SemiBold';
+}
+
+.itc-bold {
+  font-family: 'FiraSans Bold';
+}
+
+.calibri {
+  font-family: 'FiraSans Regular';
+}

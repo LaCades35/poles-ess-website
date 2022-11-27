@@ -50,18 +50,19 @@ fr:
         posts: Vous souhaitez être tenu au courant des actualités et événements du pôle ?
       block_buttons:
         formations: "S'inscrire aux formations"
-        posts: S'inscrire à la newsletter
+        posts: Voir toutes les actualités
       block_paths:
         formations: formations_path
         posts: posts_path
       block_icons:
         formations: "picto/Picto-formations.svg"
-        posts: "picto/Picto-actus.svg"
+        posts: "picto/Picto-actus-cta.png"
       icons:
         formations: "picto/Picto-formations-light.svg"
-        posts: "picto/Picto-actus.svg"
+        posts: "picto/Picto-actus.png"
     enabled_features:
       labels:
         formations: Formations
         key_numbers: Chiffres-clés
+        newsletter: Newsletter
 

@@ -1,10 +1,36 @@
 // Fichier où mettre le style propre à chaque projet
+html, body
+  @apply itc-bk
+.block-menu-toggler
+  > a.active
+    @apply itc-bold
+  > a::before
+    @apply itc-bold
+  &.active
+    > a
+      @apply itc-bold
 
-// .pic-home-01
+.picto-link
+  &:hover, &:active, &.active
+    @apply itc-demi
+.text-body
+  font-family: 'FiraSans Regular'
 
 
-// .pic-bottom
+.home-bg
+  background-image: url("../images/home-bg.png")
+.home-baseline
+  background-color: rgba(var(--color-secondary-rgb), 0.95)
+.pic-home-01
+  background-size: 180px
 
+nav > div.bg-primary
+  background-color: transparent
+.pic-bottom
+  bottom: -30px
+
+.menu-button
+  color: var(--color-primary)
 
 .bg-primary-bis
   background-image: url("../images/bg-primary-bis.png")
@@ -21,3 +47,7 @@
   @apply text-gray-200
   .emphasis
     @apply text-secondary
+
+.picto-link--highlighted img
+  margin-top: 0.75rem
+  margin-bottom: 0.60rem

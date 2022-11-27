@@ -66,11 +66,10 @@ html lang="#{I18n.locale}"
                       i.fas.fa-snowflake>
                       ' Pages
                     ul.dropdown
-                      - if feature_enabled?('key_numbers')
-                        li.nav-item
-                          = active_link_to admin_key_numbers_path, title: "Gérer les chiffres clés", class: "nav-link", active: :inclusive do
-                            i.fas.fa-snowflake>
-                            ' Chiffres clés
+                      li.nav-item
+                        = active_link_to admin_key_numbers_path, title: "Gérer les chiffres clés", class: "nav-link", active: :inclusive do
+                          i.fas.fa-snowflake>
+                          ' Chiffres clés
                       li.nav-item
                         = active_link_to admin_staff_members_path, title: "Gérer les membres de l'équipe", class: "nav-link", active: :inclusive do
                           i.fas.fa-snowflake>

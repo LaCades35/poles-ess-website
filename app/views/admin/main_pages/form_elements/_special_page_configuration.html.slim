@@ -3,4 +3,8 @@
   .form-group
     = f.label :parent_page_id, class: "font-weight-bold"
     = f.select :parent_page_id, parent_page_options, {include_blank: 'Sans parente'}, class: "form-control"
+
+  - if f.object.class.respond_to?(:enabled)
+    = render "admin/shared/enabled_field", f: f
+
   = f.submit "Valider", class: "btn btn-primary"

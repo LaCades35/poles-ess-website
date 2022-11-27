@@ -19,11 +19,11 @@
       .w-full.flex.flex-wrap.flex-col.md:flex-row
         - @highlighted_activities.each do |activity|
           .w-full.md:w-1/2.p-3
-            .bg-primary.hover:bg-primary-dark.w-full.h-60.p-5.flex.flex-col.content-center.justify-between.items-center.text-center.box-link.cursor-pointer
-              div.text-white.uppercase
-                .text-lg.text-secondary.mb-2 Je souhaite
-                .text-3xl.itc-md-cn.text-c-gray-100.mb-5 = activity.home_title
-              = link_to activity.title, activity_path(activity), class: 'rounded-full px-4 py-2 bg-white text-primary text-xs text-center uppercase'
+            .highlighted-activity.w-full.h-60.p-5.flex.flex-col.content-center.justify-between.items-center.text-center.box-link.cursor-pointer
+              div.uppercase
+                .highlighted-activity_wish.text-lg.mb-2 Je souhaite
+                .highlighted-activity_title.text-3xl.itc-md-cn.mb-5 = activity.home_title
+              = link_to activity.title, activity_path(activity), class: 'rounded-full px-4 py-2 text-xs text-center uppercase'
     .w-full.md:w-1/5
       .p-3.text-center.font-bold.bg-primary.text-white
         h3.text-lg.uppercase.text-c-gray-100 Je suis...
@@ -33,10 +33,10 @@
 .flex.flex-col.md:flex-row.mx-auto.mb-3
   = render 'highlighted_feature_block'
 
-  .w-full.md:w-1/2.text-center.bg-c-gray-100.py-12.pl-6.md:ml-3
+  .home-cta.w-full.md:w-1/2.text-center.bg-c-gray-100.py-12.pl-6.md:ml-3
     .md:w-3/5.mr-auto
       p.text-2xl.uppercase.mb-3 Vous souhaitez participer à la dynamique de l'ESS sur votre territoire ?
-      = image_pack_tag "picto/Picto-adhesion.svg", class: "w-20 mb-6 mx-auto"
+      = image_pack_tag "picto/Picto-adhesion-cta.png", class: "mb-2 mx-auto"
       = link_to "Adhérer au pôle", main_page_path(@membership_page), class: "btn btn-primary"
 
 - if @posts.any?

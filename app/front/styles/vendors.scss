@@ -1,18 +1,19 @@
 $fa-font-path: '~@fortawesome/fontawesome-free/webfonts';
 
 :root {
-  --color-primary-hs: 232, 47%;
-  --color-primary-l: 56%;
+  --color-primary-hs: 21, 91%;
+  --color-primary-l: 48%;
   --color-primary: hsl(var(--color-primary-hs),var(--color-primary-l));
   --color-primary-light: hsl(var(--color-primary-hs),calc(var(--color-primary-l) + 8%));
   --color-primary-dark: hsl(var(--color-primary-hs),calc(var(--color-primary-l) - 8%));
-  --color-primary-rgb: 92, 106, 196;
+  --color-primary-rgb: 234, 90, 11;
 
-  --color-secondary-hs: 168, 96%;
-  --color-secondary-l: 72%;
+  --color-secondary-hs: 35, 87%;
+  --color-secondary-l: 51%;
   --color-secondary: hsl(var(--color-secondary-hs),var(--color-secondary-l));
   --color-secondary-light: hsl(var(--color-secondary-hs),calc(var(--color-secondary-l) + 25%));
   --color-secondary-dark: hsl(var(--color-secondary-hs),calc(var(--color-secondary-l) - 8%));
+  --color-secondary-rgb: 239, 149, 19;
 
   --color-tercery: #42322b;
   --color-tercery-rgb: 66, 50, 43;

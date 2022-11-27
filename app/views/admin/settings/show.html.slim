@@ -61,14 +61,15 @@
         = f.label :pole_mail
         = f.text_field :pole_mail, value: Setting.pole_mail, class: "form-control"
 
-    fieldset.border.p-2.mb-4
-      legend.w-auto Bloc newsletter
-      .form-group
-        = f.label :newsletter_subscription_title
-        = f.text_field :newsletter_subscription_title, value: Setting.newsletter_subscription_title, class: "form-control"
-      .form-group
-        = f.label :newsletter_subscription_description
-        = f.text_field :newsletter_subscription_description, value: Setting.newsletter_subscription_description, class: "form-control"
+    - if feature_enabled?('newsletter')
+      fieldset.border.p-2.mb-4
+        legend.w-auto Bloc newsletter
+        .form-group
+          = f.label :newsletter_subscription_title
+          = f.text_field :newsletter_subscription_title, value: Setting.newsletter_subscription_title, class: "form-control"
+        .form-group
+          = f.label :newsletter_subscription_description
+          = f.text_field :newsletter_subscription_description, value: Setting.newsletter_subscription_description, class: "form-control"
 
     fieldset.border.p-2.mb-4
       legend.w-auto Bloc contact
